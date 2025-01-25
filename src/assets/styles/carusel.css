@@ -1,0 +1,106 @@
+/* styles.css */
+
+.flex {
+    display: flex;
+    align-items: center; /* items-center */
+  }
+  
+  .video-carousel_container {
+    position: relative;
+  }
+  
+  .video-container {
+    width: 100%; /* w-full */
+    height: 100%; /* h-full */
+    display: flex;
+    justify-content: center; /* flex-center */
+    align-items: center; /* flex-center */
+    border-radius: 1.5rem; /* rounded-3xl */
+    overflow: hidden; /* overflow */
+    background-color: black; /* bg-black */
+  }
+  
+  .pointer-events-none {
+    pointer-events: none; /* pointer-events-none */
+  }
+  
+  .video {
+    width: 100%; /* w-full */
+    height: auto; /* auto height */
+  }
+  
+  .absolute {
+    position: absolute; /* absolute */
+  }
+  
+  .top-12 {
+    top: 3rem; /* top-12 */
+  }
+  
+  .left-5 {
+    left: 5%; /* left-[5%] */
+  }
+  
+  .z-10 {
+    z-index: 10; /* z-10 */
+  }
+  
+  .text-xl {
+    font-size: 1.25rem; /* text-xl */
+  }
+  
+  .md\:text-2xl {
+    font-size: 1.5rem; /* md:text-2xl */
+  }
+  
+  .font-medium {
+    font-weight: 500; /* font-medium */
+  }
+  
+  .margin {
+    margin: 1rem; /* добавьте нужный отступ */
+  }
+  
+  .pr-10 {
+    padding-right: 2.5rem; /* pr-10 */
+  }
+  
+  .sm\:pr-20 {
+    padding-right: 5rem; /* sm:pr-20 */
+  }
+
+  /* Отступы */
+.mt-10 {
+  margin-top: 2.5rem; /* Отступ сверху */
+}
+
+.py-5 {
+  padding-top: 1.25rem; /* Внутренний отступ сверху */
+  padding-bottom: 1.25rem; /* Внутренний отступ снизу */
+}
+
+.px-7 {
+  padding-left: 1.75rem; /* Внутренний отступ слева */
+  padding-right: 1.75rem; /* Внутренний отступ справа */
+}
+
+.mx-2 {
+  margin-left: 0.5rem; /* Отступ слева от элемента */
+  margin-right: 0.5rem; /* Отступ справа от элемента */
+}
+
+/* Цвета */
+.bg-gray-400 {
+  background-color: #3e3e3e53; /* Серый цвет */
+}
+
+.bg-gray-600 {
+  background-color: #aeaeae89; /* Темно-серый цвет */
+}
+.ml-4 {
+  margin-left: 1rem; /* 16px */
+}
+
+.p-4 {
+  padding: 1rem; /* 16px */
+}
