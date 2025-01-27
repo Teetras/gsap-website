@@ -21,6 +21,9 @@ body {
 .padding{
   padding: 3%;
 }
+.padding-2{
+  padding: 2%;
+}
 .margin{
   margin-top: 5% ;
   margin-bottom: 5%;
@@ -62,11 +65,11 @@ canvas {
   }
 
   .color-container {
-    @apply flex items-center justify-center px-4 py-4 rounded-full bg-gray-300 backdrop-blur
+    @apply flex items-center justify-center px-4 py-4 rounded-full  backdrop-blur
   }
 
   .size-btn-container {
-    @apply flex items-center justify-center p-1 rounded-full bg-gray-300 backdrop-blur ml-3 gap-1
+    @apply flex items-center justify-center p-1 rounded-full  backdrop-blur ml-3 gap-1
   }
 
   .size-btn {

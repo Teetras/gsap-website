@@ -1,7 +1,8 @@
 // import { useState } from 'react'
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import HighLits from './components/HighLits';
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import HighLits from "./components/HighLits";
+import Model from "./components/Model";
 
 const App = () => {
   return (
@@ -9,8 +10,10 @@ const App = () => {
       <Navbar />
       <Hero />
       <HighLits />
+      <Model />
     </main>
   );
 };
 
 export default App;
+
