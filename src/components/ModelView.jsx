@@ -56,7 +56,8 @@ const ModelView = ({
             item={item}
             size={size}
           />
-          {/* <Leo /> */}
+          {/* <Leo color={item.color} /> */}
+          {console.log(item)}
         </Suspense>
       </group>{" "}
     </View>
