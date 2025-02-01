@@ -1,5 +1,5 @@
 //повзаимствовано
-import { Environment, Lightformer } from "@react-three/drei";
+import { Environment, Lightformer, SpotLight } from "@react-three/drei";
 
 const Lights = () => {
   return (
@@ -44,7 +44,7 @@ const Lights = () => {
        * in the scene that emits light in a specific direction.
        * https://threejs.org/docs/#api/en/lights/SpotLight
        */}
-      <spotLight
+      <SpotLight
         position={[-2, 10, 5]}
         angle={0.15}
         penumbra={1} // the penumbra is the soft edge of a shadow cast by a point light
@@ -52,7 +52,7 @@ const Lights = () => {
         intensity={Math.PI * 0.2} // the light intensity
         color={"#f8f9fa"}
       />
-      <spotLight
+      <SpotLight
         position={[0, -25, 10]}
         angle={0.15}
         penumbra={1}
@@ -60,7 +60,7 @@ const Lights = () => {
         intensity={Math.PI * 0.2}
         color={"#f8f9fa"}
       />
-      <spotLight
+      <SpotLight
         position={[0, 15, 5]}
         angle={0.15}
         penumbra={1}

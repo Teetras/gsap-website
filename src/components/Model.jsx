@@ -1,14 +1,13 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ModelView from "./ModelView";
-import { useRef, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 import { yellowImg } from "../utils";
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { View } from "@react-three/drei";
 import { models, sizes } from "../contants/index";
 import "../assets/styles/carusel.css";
-
 const Model = () => {
   const [size, setSize] = useState("small");
   const [model, setModel] = useState({
@@ -52,6 +51,7 @@ const Model = () => {
               item={model}
               size={size}
             />
+
             <ModelView
               index={2}
               groupRef={large}
@@ -61,6 +61,7 @@ const Model = () => {
               item={model}
               size={size}
             />
+
             <Canvas
               className="w-full h-full"
               style={{
@@ -76,6 +77,7 @@ const Model = () => {
               <View.Port />
             </Canvas>
           </div>
+
           <div className="mx-auto w-full">
             <p className="text-sm font-light text-center mb-5 margin">
               {model.title}
