@@ -27,7 +27,7 @@ const ModelView = ({
       id={gsapType}
       className={`w-full h-full absolute ${index === 2 ? "right-[-100%]" : ""}`}
     >
-      <ambientLight intensity={1} />
+      <ambientLight intensity={0.3} />
       <PerspectiveCamera makeDefault position={[0, 0, 4]} />
       <Lights />
       <OrbitControls
@@ -57,7 +57,6 @@ const ModelView = ({
             size={size}
           />
           {/* <Leo color={item.color} /> */}
-          {console.log(item)}
         </Suspense>
       </group>{" "}
     </View>
