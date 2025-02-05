@@ -41,13 +41,13 @@ canvas {
     margin-inline-start: auto;
   margin-inline-end: auto;
   position: relative;
-  max-width: 1120px;
+  max-width: 2140px;
 }
 .screen-max-width {
   margin-inline-start: 1;
   margin-inline-end: auto;
   position: relative;
-  max-width: 1120px;
+  max-width: 2140px;
 }
 /* стили в слое */
 @layer utilities {

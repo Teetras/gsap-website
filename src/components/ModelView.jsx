@@ -6,11 +6,11 @@ import {
   View,
 } from "@react-three/drei";
 
-import * as THREE from "three";
+import { Vector3 } from "three";
 import Lights from "./Lights";
 import IPhone from "../modal/IPhone";
 import { Suspense } from "react";
-import Leo from "../modal/Leo";
+// import Leo from "../modal/Leo";
 
 const ModelView = ({
   index,
@@ -36,7 +36,7 @@ const ModelView = ({
         enableZoom={false}
         enablePan={false}
         rotateSpeed={0.4}
-        target={new THREE.Vector3(0, 0, 0)}
+        target={new Vector3(0, 0, 0)}
         onEnd={() => setRotationState(controlRef.current.getAzimuthalAngle())}
       />
       <group
