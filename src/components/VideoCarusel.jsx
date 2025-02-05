@@ -21,16 +21,15 @@ const VideoCarusel = () => {
     isPlaying: false,
   });
   const { isEnd, isLastVideo, startPlay, videoId, isPlaying } = video;
-
   useEffect(() => {
     if (loadedData.length > 3) {
       if (!isPlaying) {
-        videoRef.current[videoId].pause();
+        videoRef.current[videoId]?.pause();
       } else {
-        startPlay & videoRef.current[videoId].play();
+        videoRef.current[videoId]?.play();
       }
     }
-  }, [startPlay, isLastVideo, isPlaying, loadedData]);
+  }, [videoId, startPlay, isPlaying, loadedData]);
 
   useEffect(() => {
     let currentProgress = 0;
@@ -104,17 +103,20 @@ const VideoCarusel = () => {
         break;
 
       case "pause":
-        setVideo((pre) => ({ ...pre, isPlaying: !pre.isPlaying }));
+        setVideo((pre) => ({ ...pre, isPlaying: false }));
+        videoRef.current[videoId]?.pause();
         break;
 
       case "play":
-        setVideo((pre) => ({ ...pre, isPlaying: !pre.isPlaying }));
+        setVideo((pre) => ({ ...pre, isPlaying: true }));
+        videoRef.current[videoId]?.play();
         break;
 
       default:
         return video;
     }
   };
+
   useGSAP(() => {
     gsap.to("#slider", {
       transform: `translateX(${-100 * videoId}%)`,
@@ -196,14 +198,14 @@ const VideoCarusel = () => {
         </div>
         <button className="control-btn bg-gray-400 p-4 ml-4 ">
           <img
-            src={isLastVideo ? replayImg : !isPlaying ? playImg : pauseImg}
-            alt={isLastVideo ? "replay" : !isPlaying ? "play" : "pause"}
-            onClick={
+            src={isLastVideo ? replayImg : isPlaying ? pauseImg : playImg}
+            alt={isLastVideo ? "replay" : isPlaying ? "pause" : "play"}
+            onClick={() =>
               isLastVideo
-                ? () => handleProcess("video-reset")
-                : !isPlaying
-                  ? () => handleProcess("play")
-                  : () => handleProcess("pause")
+                ? handleProcess("video-reset")
+                : isPlaying
+                  ? handleProcess("pause")
+                  : handleProcess("play")
             }
           />
         </button>
