@@ -59,7 +59,7 @@ const Model = () => {
           Goose on the loose
         </h1>
         <div className="flex flex-col items-center margin">
-          <div className="w-full h-[75vh] md:h-[90] overflow-hidden relative">
+          <div className="w-full h-[75vh]  overflow-hidden relative">
             <ModelView
               index={1}
               groupRef={small}
