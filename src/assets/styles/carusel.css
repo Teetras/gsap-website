@@ -60,7 +60,9 @@
   .margin {
     margin: 1rem; /* добавьте нужный отступ */
   }
-  
+  .mr-20{
+    margin-right: 20px;
+  }
   .pr-10 {
     padding-right: 2.5rem; /* pr-10 */
   }
